@@ -1,0 +1,15 @@
+{
+    "name": "thuan/course-xchange",
+    "authors": [
+        {
+            "name": "Cong-Thuan Do",
+            "email": "congthuan274@gmail.com"
+        }
+    ],
+    "autoload":{
+        "psr-4": {
+            "Router\\": "routes/"
+        }
+    },
+    "require": {}
+}
