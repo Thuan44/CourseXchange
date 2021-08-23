@@ -1,0 +1,7 @@
+RewriteEngine On
+
+# Tant que je n'ai pas atteint de fichier
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# QSA pour enchainer les params, L pour la dernière url
+RewriteRule ^(.*)$ public/index.php?url=$1 [QSA,L]
