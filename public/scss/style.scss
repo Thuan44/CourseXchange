@@ -1,3 +1,71 @@
 $primary-color: #271549;
 $secondary-color: #FDCE37;
-$gray-color: #EFEEF3;
+$light-gray: #EFEEF3;
+$dark-gray: #7C7C7C;
+
+/*
+* General
+*/
+
+body{
+    background-color: $light-gray;
+}
+
+.navbar{
+    padding: {
+        left: 50px;
+        right: 50px;
+    };
+    background-color: $primary-color !important;
+    overflow: hidden;
+}
+
+.navbar-logo-container{
+    width: 50px;
+}
+
+.nav-link{
+    font-size: 1rem;
+    padding-bottom: 7px !important;
+}
+
+.navbar-motif{
+    position: absolute;
+    top: -200px;
+    right: 0;
+    max-width: 400px;
+}
+
+h3{ 
+    color: $dark-gray;
+    text-transform: lowercase;
+    letter-spacing: .5px;
+    margin-bottom: 0 !important;
+
+    &::first-letter{
+        text-transform: uppercase;
+    }
+}
+
+button.action-btn{
+    color: $primary-color !important;
+    background-color: #fff !important;
+    border: 2px solid $secondary-color !important;
+
+    &:hover{
+        background-color: $secondary-color !important;
+    }
+}
+
+
+/*
+* Homepage
+*/
+
+.courses-container{
+    background-color: rgba($color: $primary-color, $alpha: 0.5);
+}
+
+.course-title{
+    color: $primary-color !important;
+}
