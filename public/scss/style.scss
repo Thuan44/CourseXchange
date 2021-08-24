@@ -64,6 +64,11 @@ button.action-btn{
 
 .courses-container{
     background-color: rgba($color: $primary-color, $alpha: 0.5);
+    max-width: 1224px !important;
+}
+
+.course-card{
+    width: 16.5rem !important;
 }
 
 .course-title{

@@ -2,6 +2,8 @@
 
 namespace Router;
 
+use Database\DBConnection;
+
 class Route
 {
     public $path;
@@ -30,9 +32,10 @@ class Route
     public function execute()
     {
         $params = explode('@', $this->action);
-        $controller = new $params[0]();
-        $method = $params[1];
+        $controller = new $params[0](new DBConnection(DB_NAME, DB_HOST, DB_USERNAME, DB_PWD)); // Créer une instance d'une classe Controller
+        $method = $params[1]; // Récupère la méthode après l'@
 
+        // Si l'id du post est présent, appeler la fonction method() avec le match en argument, sinon juste lancer la fonction methode()
         return isset($this->matches[1]) ? $controller->$method($this->matches[1]) : $controller->$method();
     }
 }

@@ -54,6 +54,11 @@ button.action-btn:hover {
 */
 .courses-container {
   background-color: rgba(39, 21, 73, 0.5);
+  max-width: 1224px !important;
+}
+
+.course-card {
+  width: 16.5rem !important;
 }
 
 .course-title {
