@@ -54,9 +54,40 @@ button.action-btn:hover {
 */
 .courses-container {
   background-color: rgba(39, 21, 73, 0.5);
+  border-radius: 5px;
+  max-width: 1224px !important;
 }
 
-.course-title {
+.course-link {
   color: #271549 !important;
+}
+
+.course-card {
+  width: 16.5rem !important;
+  border: none;
+  -webkit-transition: -webkit-box-shadow 0.3s ease-in-out;
+  transition: -webkit-box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  -webkit-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
+}
+
+.course-card:hover {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+          box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+  scale: 1.05;
+}
+
+.course-card-body {
+  width: 100%;
+  background-color: #EFEEF3;
+  -webkit-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
+}
+
+.course-card-body:hover {
+  background-color: #271549;
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */
