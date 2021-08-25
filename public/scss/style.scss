@@ -6,9 +6,12 @@ $dark-gray: #7C7C7C;
 /*
 * General
 */
-
 body{
     background-color: $light-gray;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .navbar{
@@ -57,11 +60,63 @@ button.action-btn{
     }
 }
 
+.small-divider {
+    height: 1px;
+    width: 20px;
+    background-color: rgba(50, 50, 50, .2);
+    margin: 10px auto 5px;
+}
+
+
+/*
+* Login
+*/
+.login-logo-container{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 50px;
+}
+
+.login-left, .login-right{
+    height: 100vh;
+}
+
+.login-left{
+    background-color: $primary-color;
+}
+
+.login-img{
+    filter: drop-shadow( 3px 3px 3px rgba(0, 0, 0, .4));
+}
+
+.form-container{
+    background-color: #fff;
+    min-width: 300px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.login-title{
+    color: $primary-color;
+    font-weight: bold !important;
+}
+
+.login-btn{
+    background-color: $primary-color;
+
+    &:hover{
+        background-color: #42237A;
+    }
+}
+
+.signup-group{
+    font-size: .9rem;
+}
+
 
 /*
 * Homepage
 */
-
 .courses-container{
     background-color: rgba($color: $primary-color, $alpha: 0.5);
     border-radius: 5px;
@@ -95,3 +150,12 @@ button.action-btn{
     }
 }
 
+
+/*
+* Media queries
+*/
+@media only screen and (max-width: 768px) {
+    .login-left {
+      display: none !important;
+    }
+  }

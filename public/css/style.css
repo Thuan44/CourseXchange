@@ -3,6 +3,11 @@
 */
 body {
   background-color: #EFEEF3;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
 }
 
 .navbar {
@@ -49,6 +54,60 @@ button.action-btn:hover {
   background-color: #FDCE37 !important;
 }
 
+.small-divider {
+  height: 1px;
+  width: 20px;
+  background-color: rgba(50, 50, 50, 0.2);
+  margin: 10px auto 5px;
+}
+
+/*
+* Login
+*/
+.login-logo-container {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 50px;
+}
+
+.login-left, .login-right {
+  height: 100vh;
+}
+
+.login-left {
+  background-color: #271549;
+}
+
+.login-img {
+  -webkit-filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.4));
+          filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.4));
+}
+
+.form-container {
+  background-color: #fff;
+  min-width: 300px;
+  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.login-title {
+  color: #271549;
+  font-weight: bold !important;
+}
+
+.login-btn {
+  background-color: #271549;
+}
+
+.login-btn:hover {
+  background-color: #42237A;
+}
+
+.signup-group {
+  font-size: .9rem;
+}
+
 /*
 * Homepage
 */
@@ -89,5 +148,14 @@ button.action-btn:hover {
 .course-card-body:hover {
   background-color: #271549;
   color: #fff;
+}
+
+/*
+* Media queries
+*/
+@media only screen and (max-width: 768px) {
+  .login-left {
+    display: none !important;
+  }
 }
 /*# sourceMappingURL=style.css.map */

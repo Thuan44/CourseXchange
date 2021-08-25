@@ -11,37 +11,45 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container-fluid">
-            <div class="navbar-flex-container d-flex align-items-end">
-                <a href="/CourseXchange/" class=" me-2">
-                    <div class="navbar-logo-container">
-                        <img class="w-100" src="<?= PUBLIC_DIRECTORY . 'src/logo-epsi.png' ?>" alt="logo-epsi">
+    <!-- Hide or show navbar and container-->
+    <?php if ($_GET['url'] !== 'login') { ?>
+
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <div class="navbar-flex-container d-flex align-items-end">
+                    <a href="/CourseXchange/" class=" me-2">
+                        <div class="navbar-logo-container">
+                            <img class="w-100" src="<?= PUBLIC_DIRECTORY . 'src/logo-epsi.png' ?>" alt="logo-epsi">
+                        </div>
+                    </a>
+                    <a class="navbar-brand" href="/CourseXchange/">CourseXchange</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link text-capitalize" aria-current="page" href="/CourseXchange/">Dashboard</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-capitalize" aria-current="page" href="#">Forum</a>
+                            </li>
+                        </ul>
                     </div>
-                </a>
-                <a class="navbar-brand" href="/CourseXchange/">CourseXchange</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link text-capitalize" aria-current="page" href="/CourseXchange/">Dashboard</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-capitalize" aria-current="page" href="#">Forum</a>
-                        </li>
-                    </ul>
                 </div>
             </div>
+            <div class="navbar-motif-container">
+                <img class="navbar-motif" src="<?= PUBLIC_DIRECTORY . 'src/motifs-bas-droite.png' ?>" alt="motif-bas-droite">
+            </div>
+        </nav>
+
+        <div class="container p-5 w-100">
+            <?= $content; ?>
         </div>
-        <div class="navbar-motif-container">
-            <img class="navbar-motif" src="<?= PUBLIC_DIRECTORY . 'src/motifs-bas-droite.png' ?>" alt="motif-bas-droite">
-        </div>
-    </nav>
-    <div class="container p-5 w-100">
+
+    <?php } else { ?>
         <?= $content; ?>
-    </div>
+    <?php } ?>
 </body>
 
 </html>
