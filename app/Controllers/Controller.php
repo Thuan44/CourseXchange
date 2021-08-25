@@ -11,6 +11,11 @@ abstract class Controller
 
     public function __construct(DBConnection $db)
     {
+        // Démarrer session
+        if (session_status() === PHP_SESSION_NONE){
+            session_start();
+        }
+
         $this->db = $db;
     }
 

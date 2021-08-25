@@ -20,10 +20,12 @@ $router = new Router($_GET['url']);
 // Login
 $router->get('/login', 'App\Controllers\UserController@login');
 $router->post('/login', 'App\Controllers\UserController@loginPost');
-// $router->get('/login', 'App\Controllers\UserController@logout');
+$router->get('/logout', 'App\Controllers\UserController@logout');
 
 // Main pages
 $router->get('/', 'App\Controllers\DashboardController@index');
 $router->get('/courses/:id', 'App\Controllers\DashboardController@show');
 
 $router->run();
+
+var_dump($_SESSION);
