@@ -21,6 +21,10 @@ body{
     };
     background-color: $primary-color !important;
     overflow: hidden;
+
+    a:hover{
+        color: $secondary-color !important;
+    }
 }
 
 .navbar-logo-container{
@@ -37,6 +41,10 @@ body{
     top: -200px;
     right: 0;
     max-width: 400px;
+}
+
+.navbar-right{
+    z-index: 1000;
 }
 
 h3{ 

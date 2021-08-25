@@ -17,6 +17,10 @@ body {
   overflow: hidden;
 }
 
+.navbar a:hover {
+  color: #FDCE37 !important;
+}
+
 .navbar-logo-container {
   width: 50px;
 }
@@ -31,6 +35,10 @@ body {
   top: -200px;
   right: 0;
   max-width: 400px;
+}
+
+.navbar-right {
+  z-index: 1000;
 }
 
 h3 {

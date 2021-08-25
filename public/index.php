@@ -27,5 +27,3 @@ $router->get('/', 'App\Controllers\DashboardController@index');
 $router->get('/courses/:id', 'App\Controllers\DashboardController@show');
 
 $router->run();
-
-var_dump($_SESSION);

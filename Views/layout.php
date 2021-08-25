@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CourseXchange</title>
     <link rel="stylesheet" href="https://bootswatch.com/5/flatly/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     <link rel="stylesheet" href="<?= PUBLIC_DIRECTORY . 'css' . DIRECTORY_SEPARATOR . 'style.css' ?>">
 </head>
 
@@ -38,6 +39,14 @@
                     </div>
                 </div>
             </div>
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 navbar-right">
+                <!-- Si je suis co -->
+                <?php if (isset($_SESSION['authorization'])) { ?>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/CourseXchange/logout"><i class="fas fa-power-off"></i></a>
+                    </li>
+                <?php } ?>
+            </ul>
             <div class="navbar-motif-container">
                 <img class="navbar-motif" src="<?= PUBLIC_DIRECTORY . 'src/motifs-bas-droite.png' ?>" alt="motif-bas-droite">
             </div>
