@@ -22,6 +22,10 @@ $router->get('/login', 'App\Controllers\UserController@login');
 $router->post('/login', 'App\Controllers\UserController@loginPost');
 $router->get('/logout', 'App\Controllers\UserController@logout');
 
+// Signup
+$router->get('/signup', 'App\Controllers\UserController@signup');
+$router->post('/signup', 'App\Controllers\UserController@signupPost');
+
 // Main pages
 $router->get('/', 'App\Controllers\DashboardController@index');
 $router->get('/courses/:id', 'App\Controllers\DashboardController@show');

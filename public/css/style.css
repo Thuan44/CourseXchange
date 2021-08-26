@@ -70,6 +70,13 @@ button.action-btn:hover {
 }
 
 /*
+* Signup
+*/
+.signup-title {
+  color: #271549 !important;
+}
+
+/*
 * Login
 */
 .login-logo-container {

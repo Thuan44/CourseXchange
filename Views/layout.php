@@ -13,7 +13,7 @@
 
 <body>
     <!-- Hide or show navbar and container-->
-    <?php if ($_GET['url'] !== 'login') { ?>
+    <?php if ($_GET['url'] !== 'login' && $_GET['url'] !== 'signup') { ?>
 
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container-fluid">
