@@ -14,6 +14,27 @@
                     <h3 class="login-title text-center mb-4">Course<span class="text-uppercase">X</span>change</h3>
                     <div class="form-container rounded p-5">
                         <form class="form" action="/CourseXchange/login" method="POST">
+                            <?php if (isset($_SESSION['errors'])) { ?>
+
+
+                                <?php foreach ($_SESSION['errors'] as $errorsArray) { ?>
+                                    <div class="mb-3">
+                                        <?php foreach ($errorsArray as $errors) { ?>
+                                            <div class="alert alert-danger" role="alert">
+                                                <?php foreach ($errors as $error) { ?>
+                                                    <small>
+                                                        <?= $error . '<br>'; ?>
+                                                    </small>
+                                                <?php } ?>
+                                            </div>
+                                        <?php } ?>
+                                    </div>
+                                <?php } ?>
+
+                            <?php } ?>
+
+                            <?php session_destroy(); ?>
+
                             <input type="text" class="form-control mb-2" placeholder="Nom d'utilisateur" name="username" value="">
                             <input type="password" class="form-control mb-2" placeholder="Mot de passe" name="password" value="">
                             <button type="submit" class="btn w-100 login-btn rounded text-white mb-3">Se connecter</button>

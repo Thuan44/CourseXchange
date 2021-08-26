@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\User;
+use App\validation\Validator;
 
 class UserController extends Controller
 {
@@ -14,10 +15,21 @@ class UserController extends Controller
 
     public function loginPost()
     {
+    
+        #1 Datavalidator
+        $validator = new Validator($_POST);
+        $errors = $validator->validate([
+            'username' => ['required', 'min:4'],
+            'password' => ['required', 'min:4']
+        ]);
+        
+        if($errors){
+            $_SESSION['errors'][] = $errors;
+            header('Location: /CourseXchange/login');
+        }
 
-        #1 Data processing
 
-        #2 Data validator
+        #2 Data processing
         $user = (new User($this->getDB()))->getByUsername($_POST['username']);
 
         if (password_verify($_POST['password'], trim($user->user_password))){
@@ -33,4 +45,5 @@ class UserController extends Controller
         session_destroy();
         return header('Location: /CourseXchange/login');
     }
+
 }
