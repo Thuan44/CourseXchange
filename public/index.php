@@ -26,8 +26,12 @@ $router->get('/logout', 'App\Controllers\UserController@logout');
 $router->get('/signup', 'App\Controllers\UserController@signup');
 $router->post('/signup', 'App\Controllers\UserController@signupPost');
 
-// Main pages
+// Homepage
 $router->get('/', 'App\Controllers\DashboardController@index');
 $router->get('/courses/:id', 'App\Controllers\DashboardController@show');
+
+// Course form
+$router->get('/admin/courses', 'App\Controllers\CourseController@create');
+$router->post('/admin/courses', 'App\Controllers\UserController@createPost');
 
 $router->run();

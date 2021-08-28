@@ -21,15 +21,22 @@ class User extends Model
         $end = array_key_last($data);
 
         foreach ($data as $key => $value) {
-            if($key === $end){break;}
-                $comma = $i === count($data)-1 ? "" : ", ";
-                $firstParenthesis .= "{$key}{$comma}";
-                $secondParenthesis .= ":{$key}{$comma}";
-                $i++;
+            if ($key === $end) {
+                break;
+            }
+            $comma = $i === count($data) - 1 ? "" : ", ";
+            $firstParenthesis .= "{$key}{$comma}";
+            $secondParenthesis .= ":{$key}{$comma}";
+            $i++;
         }
 
         array_pop($data); // Remove password_confirmation from query
 
         return $this->query("INSERT INTO {$this->table} ($firstParenthesis) VALUES ($secondParenthesis)", $data);
+    }
+
+    public function userExists(string $username)
+    {
+        return $this->getByUsername($username); 
     }
 }

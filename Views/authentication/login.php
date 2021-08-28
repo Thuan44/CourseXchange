@@ -14,9 +14,27 @@
                     <h3 class="login-title text-center mb-4">Course<span class="text-uppercase">X</span>change</h3>
                     <div class="form-container rounded p-5">
                         <form class="form" action="/CourseXchange/login" method="POST">
+
+                            <!-- Identifiants incorrects -->
+                            <?php if (isset($_SESSION['wrong_credentials']) && $_SESSION['wrong_credentials'] === true) { ?>
+                                <div class="alert alert-danger" role="alert">
+                                    <small>
+                                        <?= 'Les identifiants sont incorrects'; ?>
+                                    </small>
+                                </div>
+                            <?php } ?>
+
+                            <!-- Le nom d'utilisateur est déjà utilisé -->
+                            <?php if (isset($_SESSION['userAlreadyExists']) && $_SESSION['userAlreadyExists'] === false) { ?>
+                                <div class="alert alert-success" role="alert">
+                                    <small>
+                                        <?= 'Compte créé avec succès !'; ?>
+                                    </small>
+                                </div>
+                            <?php } ?>
+                            
+                            <!-- Autres messages d'erreur -->
                             <?php if (isset($_SESSION['errors'])) { ?>
-
-
                                 <?php foreach ($_SESSION['errors'] as $errorsArray) { ?>
                                     <div class="mb-3">
                                         <?php foreach ($errorsArray as $errors) { ?>
@@ -30,7 +48,6 @@
                                         <?php } ?>
                                     </div>
                                 <?php } ?>
-
                             <?php } ?>
 
                             <?php session_destroy(); ?>

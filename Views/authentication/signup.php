@@ -15,8 +15,16 @@
                     <div class="form-container rounded p-5">
                         <form class="form" action="/CourseXchange/signup" method="POST">
                             <h4 class="text-center mb-3 signup-title">Créer un compte</h4>
-                            <?php if (isset($_SESSION['errors'])) { ?>
 
+                            <?php if (isset($_SESSION['userAlreadyExists']) && $_SESSION['userAlreadyExists'] === true) { ?>
+                                <div class="alert alert-danger" role="alert">
+                                    <small>
+                                        <?= 'Nom d\'utilisateur non-disponible'; ?>
+                                    </small>
+                                </div>
+                            <?php } ?>
+
+                            <?php if (isset($_SESSION['errors'])) { ?>
 
                                 <?php foreach ($_SESSION['errors'] as $errorsArray) { ?>
                                     <div class="mb-3">
