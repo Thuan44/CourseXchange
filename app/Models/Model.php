@@ -28,7 +28,11 @@ abstract class Model
             || strpos($query, 'INSERT') === 0 
         ){
             $stmt = $this->db->getPDO()->$method($query);
+<<<<<<< HEAD
             $stmt->setFetchMode(PDO::FETCH_CLASS, get_class($this), [$this->db]);
+=======
+            $stmt->setFetMode(PDO::FETCH_CLASS, get_class($this), [$this->db]);
+>>>>>>> 308081a8714cf07e24df0f390dee3f61dcf35847
             return $stmt->execute($param);
         }
 

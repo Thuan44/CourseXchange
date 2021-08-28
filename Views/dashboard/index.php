@@ -15,6 +15,7 @@
     </div>
 
     <div class="courses-container p-4">
+<<<<<<< HEAD
 
         <div class="row mx-auto">
             <?php foreach ($params['courses'] as $course) { ?>
@@ -23,6 +24,15 @@
                         <div class="card course-card" style="width: 18rem;">
                             <img src="<?= PUBLIC_DIRECTORY . 'src/' . $course->course_img . '.png' ?>" class="card-img-top w-100" alt="<?= $course->course_name ?>">
                             <div class="card-body course-card-body">
+=======
+        <div class="row mx-auto">
+            <?php foreach ($params['courses'] as $course) { ?>
+                <div class="col-3" align="center">
+                    <a href="#" class="course-title text-decoration-none">
+                        <div class="card course-card" style="width: 18rem;">
+                            <img src="<?= PUBLIC_DIRECTORY . 'src/300x200.webp' ?>" class="card-img-top w-100" alt="...">
+                            <div class="card-body">
+>>>>>>> 308081a8714cf07e24df0f390dee3f61dcf35847
                                 <h5 class="card-title text-center"><?= $course->course_name ?></h5>
                             </div>
                         </div>
@@ -33,3 +43,7 @@
     </div>
 
 </section>
+
+<?php
+var_dump($params['courses']);
+?>

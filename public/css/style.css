@@ -128,8 +128,16 @@ button.action-btn:hover {
 */
 .courses-container {
   background-color: rgba(39, 21, 73, 0.5);
+<<<<<<< HEAD
   border-radius: 5px;
   max-width: 1224px !important;
+=======
+  max-width: 1224px !important;
+}
+
+.course-card {
+  width: 16.5rem !important;
+>>>>>>> 308081a8714cf07e24df0f390dee3f61dcf35847
 }
 
 .course-link {

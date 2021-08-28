@@ -139,13 +139,22 @@ button.action-btn{
 */
 .courses-container{
     background-color: rgba($color: $primary-color, $alpha: 0.5);
+<<<<<<< HEAD
     border-radius: 5px;
     max-width: 1224px !important;
+=======
+    max-width: 1224px !important;
+}
+
+.course-card{
+    width: 16.5rem !important;
+>>>>>>> 308081a8714cf07e24df0f390dee3f61dcf35847
 }
 
 .course-link{
     color: $primary-color !important;
 }
+<<<<<<< HEAD
 
 .course-card{
     width: 16.5rem !important;
@@ -179,3 +188,5 @@ button.action-btn{
       display: none !important;
     }
   }
+=======
+>>>>>>> 308081a8714cf07e24df0f390dee3f61dcf35847
